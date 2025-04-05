@@ -20,6 +20,8 @@ public int compareTo(Sciatore s){
     return this.getTempoTotale()-s.getTempoTotale();
 }
 public String toString(){
-    return nome + " " + getTempoTotale();
+    int m = getTempoTotale()/60;
+    int sec = getTempoTotale()%60;
+    return nome + " " + String.format("%02d:%02d",m,sec);
 }
 }
